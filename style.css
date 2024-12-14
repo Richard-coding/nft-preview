@@ -1,0 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+:root {
+  --background-bg: hsl(217, 54%, 11%);
+  --background-card: hsl(216, 50%, 16%);
+  --background: rgba(0, 255, 255, 0.5);
+  --text: hsl(215, 51%, 70%);
+  --hover: hsl(178, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--background-card);
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0px 28px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  opacity: 0.1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 15px;
+  }
+
+  p {
+    color: var(--text);
+    font-weight: 300;
+  }
+}
+
+.flex-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-item {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.etherum {
+  width: 10px;
+  height: 20px;
+}
+
+.clock {
+  width: 20px;
+  height: 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 30px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.detail {
+  color: var(--white);
+}
+
+.hover:hover {
+  color: var(--hover);
+}
+
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img {
+  width: 100%; /* A imagem principal ocupa toda a largura do container */
+  border-radius: 8px; /* Arredondamento */
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Fundo ocupa 100% da largura de figure */
+  height: 100%; /* Fundo ocupa 100% da altura de figure */
+  background-color: var(--hover); /* Fundo semitransparente */
+  border-radius: 8px; /* Igual ao da imagem principal */
+  opacity: 0; /* Inicialmente invisível */
+  display: flex; /* Para centralizar o ícone */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Efeito suave */
+}
+
+figure:hover .overlay {
+  opacity: 0.8; /* Torna visível no hover */
+}
+
+.view {
+  width: 50px; /* Define o tamanho do ícone */
+}
+
+/*
+  Description pt-br/en
+
+  Neste projeto, houve o desafio de criar um efeito de hover sobre uma imagem principal que exibisse um ícone centralizado (um "olho de visualização") com um fundo semitransparente que ocupasse 100% da área da imagem. O principal problema era garantir que o ícone tivesse um tamanho fixo (50px) e permanecesse centralizado, enquanto o fundo de hover cobrisse toda a imagem, sem distorções ou quebras.
+
+A solução envolveu o uso de CSS com position: absolute para o fundo e o ícone, garantindo:
+
+O fundo se ajusta dinamicamente ao tamanho da imagem com width: 100% e height: 100%.
+O ícone é centralizado usando flexbox dentro de um elemento overlay.
+Transição suave com opacity foi implementada para melhorar a experiência do usuário. 
+  
+
+In this project, the challenge was to create a hover effect on a main image that displays a centered icon (a "view eye") with a semi-transparent background covering 100% of the image area. The main issue was ensuring that the icon had a fixed size (50px) and remained perfectly centered, while the hover background occupied the entire image without distortions or breaks.
+
+The solution involved using CSS with position: absolute for both the background and the icon, ensuring:
+
+The background dynamically adjusts to the image size using width: 100% and height: 100%.
+The icon is centered using flexbox within an overlay element.
+A smooth transition with opacity was implemented to enhance the user experience. 
+*/
